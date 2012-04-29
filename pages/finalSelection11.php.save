@@ -1,0 +1,73 @@
+<?php
+	include_once("config.lib.php");
+	if(isset($_POST["MyPlayingEleven"]))
+	{
+		$price=0;
+		$finalList=addslashes($_POST["MyPlayingEleven"]);
+		$splitPlayer=explode(";",$finalList);
+		if(count($splitPlayer)!=11) 
+			{
+				echo "No. of Players Do not match.";
+				return;
+			}
+		else
+			{
+				$value=array();
+				for($i=0;$i<count($splitPlayer);$i++)
+					{
+
+						if(isset($checkPlayerAdded[$splitPlayer[$i]])) {echo "Two players are same";return;break;}
+						else
+						{
+					$checkPlayerAdded[$splitPlayer[$i]]=1;
+						$detail=explode("(",$splitPlayer[$i]);
+						$detail[1]=substr($detail[1],0,-1);
+						for($j=0;$j<count($DBASE_ARR);$j++)
+						{
+							if($DBASE_ARR[$j]["TYPE"]==$detail[1])
+							{
+								$query="SELECT {$DBASE_ARR[$j]['DISPLAY'][1]} FROM {$DBASE_ARR[$j]['DBNAME']} WHERE {$DBASE_ARR[$j]['DISPLAY'][0]}='{$detail[0]}'";
+								$res=mysql_fetch_assoc(mysql_query($query));
+								$price+=$res[$DBASE_ARR[$j]['DISPLAY'][1]];
+								if(!(isset($value[$detail[1]])))
+									{
+
+										$value[$detail[1]]=0;
+									}
+										$value[$DBASE_ARR[$j]["TYPE"]]++;
+							}
+
+						}
+						}
+				}
+					$correct=1;
+							for($i=0;$i<count($DBASE_ARR);$i++)
+								{
+							 if($value[$DBASE_ARR[$i]['TYPE']]!=$DBASE_ARR[$i]['CHOOSEN11']) 
+									{
+
+											$correct=0;break;
+									}
+								}
+					if($correct)
+					{
+						$idValue=getId($_SESSION["teamName_PPL"]);
+
+						$query="UPDATE {$USERDETAILDB} SET `ppl_id`=".$idValue.",`ppl_playingEleven`='".$finalList."'";
+
+						$res=mysql_query($query,$connect);
+						echo $query;
+
+					}
+					else
+						{
+							echo "Your Team formation should be Batsman:5";
+							echo " Bowler:4";
+							echo " All Rounder:1";
+							echo " Keeper:1";
+							    						
+								
+			}	
+			}
+		
+?>

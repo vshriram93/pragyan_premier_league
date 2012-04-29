@@ -1,0 +1,454 @@
+div#menuListDiv
+	{
+	width:100%;
+	height:25px;
+	top:0;
+	color:#FFF;
+    position: absolute;
+	}
+div#mainDiv
+      {
+    margin-top: -16px;
+    width: 100%;
+    background-color: rgba(240,240,240,0.5);
+    min-height: 500px;
+    margin-bottom: 75px;
+    padding-bottom: 50px;
+    color: #000;
+      }
+#background{
+    position: fixed;
+    z-index: -1000000;
+    opacity: 0.75;
+}
+#background img{
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    min-width: 1280px;
+}
+body
+	{
+	-moz-user-select:none;
+	-webkit-user-select:none;
+    background:black;
+	    margin: 0;
+    width:100%;
+	    height:100%;
+    min-height: 768px;
+	    color:#000;
+	    font-family: sans-serif;
+	}
+ul#menuListUserLoginDetailUl li
+	{
+	display:inline;
+	float:right;	
+	padding-right: 10px;
+	margin-right: 10px;
+	height:auto;
+
+	}
+ul#menuListUserLoginDetailUl
+	{
+	float:right;	
+	position:relative;
+	width:auto;
+	height:auto;
+	top:-10px;
+	height:auto;
+	}
+div#loginFormDiv
+	{
+	display:none;
+	float:right;
+	position: fixed;
+	right:0;
+	
+	}
+div#frameDiv
+	{
+	  width:1024px;
+    margin: 0 auto;
+	height:auto;
+	top:40px;
+	}
+div#menuListTeamNameDiv
+	{	
+		float:right;
+		position:absolute;
+		right:10px;
+		height:auto;	
+		color:#FFF
+	}
+li#showLogoutLi
+	{
+	position:absolute;
+	right:10px;
+		}
+
+
+
+
+
+
+/*CHOOSE PLAYER*/
+    .playerTypeDiv
+    {
+       position:relative;
+   	width:720px;
+		height:65%;
+		left:3%;
+    padding-top:1%;
+
+    }
+		.playerTypeUl
+		{
+			width: 650px;
+			position: relative;
+			height:25px;		
+			text-align: center;
+			right: 7%;
+		}
+    .playerTypeLi
+    {
+	display:inline;
+	width:auto;
+	text-align: center;
+	position:relative;
+	padding-right:10px;
+    }
+		.playerTypeForFinalListUl
+		{
+			width: auto;
+			position: relative;
+			height:25px;		
+			text-align: center;
+			right: 7%;
+		}
+
+
+	.playerTypeForFinalListLi
+	{
+	display:inline;
+	width:auto;
+	text-align: center;
+	position:relative;
+	padding-right:10px;
+	}
+
+	.finalListLi
+	{
+		margin-right: 20px;	
+		position: relative;
+		left: -35px;	
+	}
+    .ListPlayersImageDiv
+    {
+	display:none;
+
+	width:690px;
+	height:400px;
+	overflow-y:auto;
+	overflow-x: hidden;
+   }
+#ListPlayersClassicViewDiv
+	{
+		min-width:666px;
+		height:350px;
+		overflow-y:scroll;
+		display:none;
+	    margin-left: 10px;
+	}
+ 
+    #probablePlayerTypeDiv 
+    {
+    margin-top: 50px;
+    margin-right: 10px;
+	float:right;
+	width: 250px;
+	height: 390px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+        transition: background-color 1s;
+        -webkit-transition:background-color 1s;
+        -moz-transition:background-color 1s;
+        -o-transition:background-color 1s;
+
+    }
+
+    .playerNameImg
+    {
+        background-color: #fff;
+	position:static;
+	width:100px;
+	float:left;
+	height:110px;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    }
+.playerNameImg:hover{
+    box-shadow: 0 0 20px #111;
+}
+    #listPlayerUl
+    {
+	float:left;
+	height:325px;
+	width:200px;
+    margin-top: 22px;
+	overflow-y:auto;
+	overflow-x:visible; 
+   }
+
+    #listPlayerUl li
+    {
+	margin-left:-40px;	
+   }
+   #ListPlayersImageDiv
+   {
+   
+   
+   }
+
+    #choosePlayer
+    {
+	position:static;
+	width:100%;
+    padding-top: 5px;
+    }
+    .magnifyImage
+		{
+			position:relative;
+			top:-119px;
+			left:75px;		
+				
+		}
+		.displayPlayerNameOnImageHover
+		{
+			position:relative;
+			top:-45px;
+			background-color: black;
+						color:#fff;
+		}
+		.magnifiedImage
+		{
+			position: relative;
+			width:200px;
+			height:220px;
+		}
+		#playerCompleteDetailTable
+		{
+			position:relative;
+			top:15%;
+          left: 2%;
+           width: 300px;
+			font-size: 13.5px;			
+			height:90%;
+		
+		}
+#playerCompleteDetailTable div
+{
+    display: inline;
+    margin-left: 30px;
+}
+		.FinalPlayerListTable
+		{
+			display: none;
+			height: 350px;
+			padding-left: -20px;
+			overflow-y:scroll;
+			overflow-x:visible;
+		}	
+				
+		#confirmFinalList
+		{
+			display: none;		
+		float: left;
+		margin-left: 35px;
+		
+		}
+		.closeIconForEnlargedImage
+		{
+			position:absolute;
+			top:-77px;
+			width:60px;
+			cursor:pointer;
+			height:60px;
+			left:-28px;
+		}
+		#listFinalPlayerUl
+		{
+			height: 300px;
+			overflow-y:scroll;
+			overflow-x:visible;
+		
+		
+		}
+		
+   #chooseFinalListDiv 
+    {
+	float:right;
+    margin-top: 30px;
+       display: none;
+		height: 100%;
+        min-height: 175px;
+	overflow-y: auto;
+	overflow-x: hidden;
+        transition: background-color 1s;
+        -webkit-transition:background-color 1s;
+        -moz-transition:background-color 1s;
+        -o-transition:background-color 1s;
+
+    }
+		
+	#openClassicView
+	{
+		text-decoration: underline;
+	cursor: pointer;
+	margin-left: 37px;
+	float: left;
+	margin-top: -30px;
+	}
+	#slowConnectionP
+	{
+        position: relative;
+        color:#000;
+	
+	}
+/*CHOOSE PLAYER ENDS*/
+#confirmFinalList td
+{
+    padding-left: 40px;
+}
+#ListPlayersClassicViewDiv table{
+    width: 500px;
+	
+}
+#ListPlayersClassicViewDiv td
+{
+    min-width: 70px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-bottom: 1px solid;
+}
+#ListPlayersClassicViewDiv tr{
+    vertical-align: middle;
+}
+#ListPlayersClassicViewDiv tr:hover
+{
+    background-color: #ccc;
+
+}
+#menu{
+    list-style:none;
+    width:100%;
+    color:#fff;
+    background-color: #000;
+    padding-left: 0;
+    height: 30px;
+    vertical-align: middle;
+    box-shadow: 0 0 15px #555 inset;
+}
+#menu li{
+    display: inline;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.playerTypeLi img:hover{
+    box-shadow: 0 0 15px #000;
+}
+#completeDetailOfPlayer{
+	position: absolute;
+text-align: center;
+background-color: rgba(255,255,255,0.9);
+box-shadow: 0 0 15px #000;
+width: 410px;
+margin-left: 35%;
+top: 50px;
+    
+}
+#completeDetailOfPlayer table{
+	margin-bottom: 50px;
+		
+	}
+#completeDetailOfPlayer img{
+	margin-top: 50px;
+		
+	}
+#fulldetails_name{
+    display: inline;
+}
+#fulldetails_price{
+        display: inline;
+}
+.fullDetailsPlayerName{
+	font-size:1.5em;
+	font-weight: bold;	
+	}
+	#balanceAmount{		
+text-align: right;		
+		}
+		#balanceAmount img{
+			display: inline;			
+			}
+		#balanceAmount h3{
+			display: inline;			
+			}
+.ClassicViewInnerDetailDiv1{
+    background-color: rgba(255,255,255,0.9);
+    position:absolute;
+    top:0px;
+	 margin-left: 500px;
+    margin-top:0px;
+    min-width:200px;
+    text-align: center;
+    padding-bottom:30px;
+    padding-top:30px;
+    box-shadow: 0 0 15px #000;
+	 font-size:13px;
+	
+	}
+.ListPlayersClassicViewPlayerDetailsTable
+	{
+		font-size:15px;
+	}
+	
+	#playerChoosenCounter{		
+text-align: right;		
+		}
+		#playerChoosenCounter img{
+			display: inline;			
+			}
+		#playerChoosenCounter h3{
+			display: inline;			
+			}
+
+#alertPlayerInfo
+	{
+		
+		position:fixed;
+		top: 35%;
+		text-align: center;
+		min-height:150px; 
+		margin-left: 33%;;	
+		min-width:500px;
+		background-color: rgba(255,255,255,0.4);
+ 		vertical-align: middle;
+			
+		display: none;
+		margin-top: 0 auto;
+		border: 1px solid; 	
+	}
+	#alertDiv
+	{
+		margin-top:50px;
+	
+	}
+	#ListPlayersClassicViewDiv
+	{
+		display:none;
+		float:left;
+		width:50%;
+	}
+	
+	
